@@ -61,3 +61,23 @@ export const home = () => {
         return infoContainer;
     }
 };
+
+export const homeRef = () => {
+    const refContainer = document.createElement("div");
+    refContainer.id = "references";
+    const logoRef = createReference("Restaurant Logo", "https://www.vecteezy.com/vector-art/35556556-restaurant-logo-with-spoon-and-fork-icon-modern-concept");
+    const pastaGifRef = createReference("Pasta Gif", "https://giphy.com/gifs/day-pasta-hump-5J3l6o7fNj7LG");
+    const happyHourRef = createReference("Happy Hour", "https://unsplash.com/photos/group-of-people-tossing-wine-glass-tAH2cA_BL5g");
+    const pastaSpecialRef = createReference("Penne Pasta", "https://unsplash.com/photos/a-fork-lifts-penne-pasta-coated-in-red-sauce-0CHWRa_ZqJ4");
+    const dessertSpecialRef = createReference("Chocolate Cake", "https://unsplash.com/photos/carrot-cake-slice-on-teal-plate-u5_cfnwi2CY")
+
+    refContainer.append(logoRef, pastaGifRef, happyHourRef, pastaSpecialRef, dessertSpecialRef);
+    return refContainer; 
+
+    function createReference(label, link){
+        const reference = document.createElement("a");
+        reference.href = link;
+        reference.textContent = label;
+        return reference;
+    }
+}
