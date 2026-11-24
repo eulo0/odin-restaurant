@@ -50,7 +50,7 @@
     align-items: center;
 }
 
-.hero{
+#hero{
     position: absolute; 
     object-fit: cover; 
     z-index: 0;
@@ -98,7 +98,7 @@
     background: rgb(137, 0, 0);
 }
 
-.header-2{
+.header2{
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
@@ -158,4 +158,12 @@ a {
 .caption{
     font-size: 1.2rem;
     margin-top: 1rem;
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
 }
