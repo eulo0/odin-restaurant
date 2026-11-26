@@ -1,6 +1,6 @@
 import { home, homeRef } from "./home.js";
 import { menu, menuRef } from "./menu.js"; 
-import { about } from "./about.js";
+import { about, aboutRef } from "./about.js";
 import "./styles.css";
 
 (() => {
@@ -9,6 +9,7 @@ import "./styles.css";
     const content2 = document.getElementById("content2");
     const homeBtn = document.getElementById("Home");
     const menuBtn = document.getElementById("Menu");
+    const aboutBtn = document.getElementById("About");
 
     for (const btn of navBtns){
         btn.addEventListener("click", () => {
@@ -26,6 +27,11 @@ import "./styles.css";
         content.append(menu());
         content2.append(menuRef());
     });
+
+    aboutBtn.addEventListener("click", () => {
+        content.append(about());
+        content2.append(aboutRef());
+    })
 
     content.append(home());
     content2.append(homeRef());
